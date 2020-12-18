@@ -1,0 +1,10 @@
+import { Query, Resolver } from 'type-graphql'
+
+@Resolver()
+export class <%= props.pascalName %>Resolver {
+  @Query(() => String)
+  <%= props.pascalName %>() {
+    return 'The Republic'
+  }
+}
+

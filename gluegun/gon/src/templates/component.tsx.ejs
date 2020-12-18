@@ -1,0 +1,18 @@
+
+import React from "react"
+import { View } from "react-native"
+<% if (props.haveStyle) { -%>
+import { <%= props.camelCaseName %>Styles as styles } from "./<%= props.name %>.styles"
+<% } -%>
+
+export type <%= props.pascalName %>Props = {}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const <%= props.pascalName %>  = (props: <%= props.pascalName %>Props>) => {
+  // const { someStore } = useStores()
+
+  return (
+    <View >
+    </View>
+  )
+}

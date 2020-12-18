@@ -1,0 +1,14 @@
+node_modules/
+yarn/
+thefuck/
+configstore/
+gatsby/
+devcert/
+.mono/
+Microsoft\VisualStudio Services/
+NuGet/
+stetic/
+xbuild/
+coc/extensions
+karabiner/
+

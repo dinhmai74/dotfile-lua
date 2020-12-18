@@ -1,0 +1,17 @@
+import React, { Component } from 'react'
+import cx from "classnames"
+
+interface <%= props.pascalName %>Props{
+  className?: string  
+}
+
+export class <%= props.pascalName %> extends React.Component<<%= props.pascalName %>Props> {
+  render() {
+    const { className } = this.props
+    return (
+      <div className={cx("",className)}>
+        <%= props.pascalName %>
+      </div>
+    )
+  }
+}

@@ -1,0 +1,19 @@
+import React, { Component } from 'react'
+import { View } from 'react-native'
+import { Text } from "../"
+<% if (props.haveStyle) { -%>
+import { <%= props.camelCaseName %>Styles as styles } from "./<%= props.name %>.styles"
+<% } -%>
+
+export interface <%= props.pascalName %>Props {}
+
+
+export class <%= props.pascalName %> extends React.Component<<%= props.pascalName %>Props> {
+  render() {
+    return (
+      <View>
+        <Text> textInComponent </Text>
+      </View>
+    )
+  }
+}

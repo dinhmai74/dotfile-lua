@@ -1,0 +1,15 @@
+import React from "react"
+import { <%= props.pascalName %> } from "components"
+import cx from "classnames"
+
+
+export default {
+  title: "<%= props.pascalName %>",
+  component: <%= props.pascalName %>,
+}
+
+export const Normal = () => (
+  <div className="p-8">
+    <<%= props.pascalName %> />
+  </div>
+)

@@ -1,0 +1,13 @@
+import { ObjectType, Field } from 'type-graphql'
+import { FieldError } from '../FieldError'
+import { <%= props.pascalName %>} from '../../entity/<%= props.pascalName %>'
+
+@ObjectType()
+export class <%= props.pascalName %>Response {
+  @Field(() => <%= props.pascalName %>, { nullable: true })
+  <%= props.camelCaseName %>? : <%= props.pascalName %>
+
+  @Field(() => [FieldError], { nullable: true })
+  errors?: FieldError[]
+}
+

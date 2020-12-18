@@ -1,0 +1,530 @@
+snippet us.s "useState" w
+const [$1, set${1/\w+\s*/\u$0/g}] = useState(${3:''})${0:;}
+endsnippet
+
+snippet us.e "useEffect" w
+useEffect(() => {
+  $1
+})${0:;}
+endsnippet
+
+snippet us.er "useEffect with return" w
+useEffect(() => {
+  $1
+	return () => {
+    $2
+	};
+})${0:;}
+endsnippet
+
+snippet us.c "useContext" w
+const $1 = useContext($2)${0:;}
+endsnippet
+
+snippet us.r "useReducer" w
+const [$1, dispatch] = useReducer($1Reducer, ${2:${VISUAL:initialState}})
+const $1Reducer = (state, action) => {
+	switch (action.type) {
+		default:
+			return state;
+	}
+}${0:;}
+endsnippet
+
+snippet us.cb "useCallback" w
+useCallback(
+	() => {
+		$1
+	},
+	[$2],
+)${0:;}
+endsnippet
+
+snippet us.m "useMemo" w
+const $1 = useMemo(() => {
+	$2
+}, [$3])${0:;}
+endsnippet
+
+snippet us.rf "useRef" w
+const $1 = useRef($2)${0:;}
+endsnippet
+
+snippet (cl) "console.log"
+console.log('${2:$1: }', ${1});
+endsnippet
+snippet impd "import default file" b
+import ${2: $1 } from '${1}'
+endsnippet
+
+snippet imp "Destructuring import" b
+import { $2 } from '$1'
+endsnippet
+
+
+snippet log "log" 
+console.log({ $1 })
+endsnippet
+
+
+snippet style " create styel file" b
+import { StyleSheet } from 'react-native'
+
+export default StyleSheet.create({
+	container:{}
+})
+endsnippet
+
+snippet ims "import styled-components" b
+import styled from 'styled-components'
+endsnippet
+
+snippet dob " destructoring object"
+const { $2 } = $1 ;
+endsnippet
+snippet doa "destructoring by array"
+const [ $2 ] = $1 ;
+endsnippet
+snippet dop " destructoring props"
+const { $2 } = props;
+endsnippet
+snippet dop " destructoring state"
+const { $2 } = state ;
+endsnippet
+
+snippet exd "export * from" b
+export * from './$1'
+endsnippet
+
+snippet dp "default props" b
+${1:`!v expand('%:t:r')`}.defaultProps={
+	$2
+}
+endsnippet
+
+snippet ctl "tron log string"
+console.tron.log($1)
+endsnippet
+
+snippet ctlo "tron log"
+console.tron.log('$1', $1)
+endsnippet
+
+snippet tl "tron log"
+console.tlog('$1', $1)
+endsnippet
+
+snippet rnce "create react native full component snip" b
+import React, { Component } from 'react'
+import { Text, View } from 'react-native'
+import { I$1, I$1State } from './$1.presets.tsx'
+import {  } from './$1.props.tsx'
+
+export class ${1:`!v expand('%:t:r')`} extends Component <I$1,I$1State>{
+	render() {
+		return (
+			<${3:View}>
+				<Text>123 </Text>
+			</$3>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+# snippet int "interface"
+# export interface $1 {
+	# $1
+# }
+# endsnippet
+
+# snippet story "story book default story"
+# import * as React from "react"
+# import { storiesOf } from "@storybook/react-native"
+# import { StoryScreen, Story, UseCase } from "../../../../../storybook/views"
+# import TradingItem from "./TradingItem"
+
+# declare var module
+
+# storiesOf("Trading history card", module)
+  # .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
+  # .add("normal item", () => (
+    # <Story>
+      # <UseCase text="default" usage="default">
+        # <TradingItem />
+      # </UseCase>
+    # </Story>
+  # ))
+
+# endsnippet
+
+
+snippet rnf "create react native stateless" b
+import React, { useState } from 'react'
+
+type ${1:`!v expand('%:t:r')`}Props = {
+	
+}
+
+export const ${1:`!v expand('%:t:r')`} = (props : ${1:`!v expand('%:t:r')`}Props )=>{
+		return (
+		);
+}
+
+endsnippet
+
+snippet rf "create react FunctionComponent" b
+import React from 'react'
+
+type ${1:`!v expand('%:t:r')`}Props = {
+	
+}
+
+export const ${1:`!v expand('%:t:r')`} = (props : ${1:`!v expand('%:t:r')`}Props )=>{
+		return (
+			<${3:div}>
+			</$3>
+		);
+}
+
+endsnippet
+
+snippet fc "function component"  b
+type $1Props = {
+	$3
+}
+
+export const $1 = (props : $1Props )=>{
+	$4
+}
+
+endsnippet
+
+snippet dp " destructoring props"
+const { $1 } = props;
+endsnippet
+
+snippet ds " destructoring states"
+const { $1 } = state;
+endsnippet
+
+snippet dob " destructoring "
+const { $2 } = $1;
+endsnippet
+
+snippet cmt "cmt"
+/* ------------- $1 ------------- */
+endsnippet
+
+# snippet rdf "render formik form" 
+# render$1 = ({} : FormikProps<FormValues>) => {}
+# endsnippet
+
+# snippet styled "styled component" 
+# const Styled$1= styled($2)`$3`
+# endsnippet
+
+
+snippet lodash "lodash" b
+import _ from "lodash"
+endsnippet
+
+snippet func "func const" b
+const $1 = ( $2 ) => { $3 }
+endsnippet
+
+snippet useMemoOne "useMemoOne" 
+const {} = useMemoOne(() => ({
+	$1		
+}),[])
+endsnippet
+
+snippet eslint "Description" b
+// eslint-disable-next-line
+endsnippet
+
+snippet use "useEffect" 
+React.useEffect(() => {
+  $1
+},[])
+endsnippet
+
+snippet user "useEffect with return" 
+React.useEffect(() => {
+  $1
+	return () => {
+    $2
+	};
+},[])
+endsnippet
+
+snippet usc "useContext" w
+const $1 = React.useContext($2)
+endsnippet
+
+snippet uscb "useCallback" w
+React.useCallback(
+	() => {
+		$1
+	},
+	[$2],
+)${0:;}
+endsnippet
+
+snippet usm "useMemo" w
+const $1 = React.useMemo(() => {
+	$2
+}, [$3])
+endsnippet
+
+snippet usrf "useRef" w
+const $1 = React.useRef($2)
+endsnippet
+
+
+snippet useThemes "Description" b
+const { color } = useThemes()
+endsnippet
+
+snippet cl "Description" 
+console.log("$1", $1)
+endsnippet
+
+
+snippet useHistory "Description" 
+const history = useHistory()
+endsnippet
+
+
+snippet v4 "v4"  b
+import { v4 } from 'uuid'
+endsnippet
+
+snippet process "Description" b
+process.env.PUBLIC_URL
+endsnippet
+
+snippet icx "import classnames" 
+import cx from "classnames"
+endsnippet
+
+snippet fragment "fragment" 
+<>
+	$1
+</>
+endsnippet
+
+snippet muiBtn "mui button contained primary" b
+<Button variant="contained" color="primary">$1</Button>
+endsnippet
+
+snippet muiUseStyles "create useStyle mui" b
+import { makeStyles, createStyles } from "@material-ui/core"
+
+const useStyles = makeStyles((theme: Theme) =>
+	createStyles({
+		$1	
+	}),
+)
+
+endsnippet
+
+snippet constfc "const fc" 
+const $1 = () => {
+}
+
+endsnippet
+
+snippet piscsum "photo piscsum" b
+https://picsum.photos/350/350
+endsnippet
+
+
+# snippet zustand "create zustand" 
+# type $1State = {
+
+# }
+
+# export const [$1] = create<$1State>(
+	# persist("$2")(
+		# immer((set: any,get: any)=>({
+			# $3
+		# }))
+	# )
+# )
+# endsnippet
+
+snippet cx "className with cx" 
+className={cx("$1")}
+endsnippet
+
+snippet class "className with cx" 
+className={("$1")}
+endsnippet
+
+snippet className  "className with cx" 
+className={("$1")}
+endsnippet
+
+snippet fca "function arrow without any param" 
+() => { $1 }
+endsnippet
+
+snippet afc "function arrow without any param" 
+() => { $1 }
+endsnippet
+
+snippet ()=> "function arrow without any param" 
+() => { $1 }
+endsnippet
+
+
+snippet Styled "Styled component with tailwind" 
+const Styled$1= styled.main.attrs({
+	className: "",
+})``
+endsnippet
+
+snippet lorem "loremedium" 
+"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,"
+endsnippet
+
+snippet loremshort "short" 
+"Lorem Ipsum is simply dummy text of the printing"
+endsnippet
+
+snippet loremlong "lorem long" 
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+endsnippet
+
+snippet styled "const styled component" 
+const $1 = styled($2)(p=>({
+	$3
+}))
+endsnippet
+
+snippet cstyled "const styled component" 
+const $1 = styled($2)(p=>({
+	$3
+}))
+endsnippet
+
+snippet csty "const styled component" 
+const $1 = styled($2)(p=>({
+	$3
+}))
+endsnippet
+
+snippet sd "const styled component" 
+const $1 = styled(${2:View})({
+	$3
+})
+endsnippet
+
+snippet sdview "Styled view component" 
+const $1 = styled(View)({
+	
+})
+endsnippet
+
+snippet sdtext "Styled Text component" 
+const $1 = styled(Text)({
+
+})
+endsnippet
+
+snippet sdprops "styled props" 
+${( p )=> \`
+	$1
+\`}
+endsnippet
+
+snippet jcmt "jsxcommet" 
+{/**----------- $1 ----------------*/}
+endsnippet
+
+
+snippet ira "import reanimated" 
+import Animated, {
+	// @ts-ignore
+	useAnimatedGestureHandler,
+	// @ts-ignore
+	useAnimatedStyle,
+	// @ts-ignore
+	useSharedValue,
+	// @ts-ignore
+	withSpring,
+} from "react-native-reanimated"
+endsnippet
+
+snippet gestureHandler "get gestureHandler"
+const gestureHandler = useAnimatedGestureHandler({
+		onStart: (_, ctx) => {
+			ctx.startX = x.value
+		},
+		onActive: (event, ctx) => {
+			x.value = ctx.startX + event.translationX
+		},
+		onEnd: _ => {
+			x.value = withSpring(0)
+		},
+	}
+endsnippet
+
+snippet useAnimatedStyle "useAnimatedStyle" 
+const $1 = useAnimatedStyle(()=>{
+	return {
+		$2
+	}
+})
+endsnippet
+
+snippet transform "transform style" 
+transform: [{ $1 }, ],
+endsnippet
+
+
+snippet sizedbox "SizedBox" 
+<SizedBox h={${1:4}} />
+endsnippet
+
+snippet map "map jsx" 
+{$1.map((v, i) => {
+	$2
+})}
+endsnippet
+
+
+snippet antpage "ant new page" 
+import { PageContainer } from '@ant-design/pro-layout'
+import { Card } from 'antd'
+import React from 'react'
+
+export default (): React.ReactNode => {
+	return (
+		<PageContainer>
+			<Card></Card>
+		</PageContainer>
+	)
+}
+endsnippet
+
+snippet onError "onError create" 
+const onError = (e) => enqueueSnackbar(e, { variant: "warning" })
+endsnippet
+
+snippet loading "loading" 
+const loading = isFetching
+if(loading) return <AppLoading />
+
+endsnippet
+snippet moment "moment" 
+import moment from 'moment'
+endsnippet
+
+snippet styles "styles" 
+const styles = StyleSheet.create({
+	$1
+})
+endsnippet

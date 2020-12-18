@@ -1,0 +1,16 @@
+import { Entity, Property, Unique } from 'mikro-orm'
+import { Field, ObjectType } from 'type-graphql'
+import { BaseEntity } from './BaseEntity'
+
+@ObjectType()
+@Entity()
+export class <%= props.pascalName %> extends BaseEntity {
+  @Property()
+  metaObject?: object
+
+  @Property()
+  metaArray?: any[]
+
+  @Property()
+  metaArrayOfStrings?: string[]
+}
