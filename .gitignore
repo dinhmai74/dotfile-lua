@@ -11,4 +11,4 @@ stetic/
 xbuild/
 coc/extensions
 karabiner/
-
+.zsh_history
