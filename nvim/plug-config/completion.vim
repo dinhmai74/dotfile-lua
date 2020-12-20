@@ -18,3 +18,6 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 let g:completion_enable_snippet = 'UltiSnips'
+autocmd BufWritePost * lua vim.lsp.buf.formatting()
+autocmd BufWritePre *.tsx lua vim.lsp.buf.code_action({ source = { organizeImports = true } })
+let g:completion_enable_snippet = 'UltiSnips'
