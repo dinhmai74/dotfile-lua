@@ -42,8 +42,8 @@ local on_attach_common = function(_)
     -- Diagnostics mapping
     map('n', '<leader>ee',
         '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
-    map('n', '<leader>[g', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
-    map('n', '<leader>]g', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
+    map('n', '[g', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
+    map('n', ']g', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
 
 end
 local on_attach_clangd = function(client)

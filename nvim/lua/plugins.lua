@@ -38,6 +38,10 @@ return packer.startup(function()
     use 'airblade/vim-gitgutter'
     use 'tpope/vim-rhubarb'
     use 'jiangmiao/auto-pairs'
+    use 'eslint/eslint'
+    use 'prettier/vim-prettier'
+    use 'preservim/nerdtree'
+    use 'Xuyuanp/nerdtree-git-plugin'
     use {
         'ojroques/nvim-lspfuzzy',
         requires = {

@@ -8,6 +8,7 @@ vim.lsp.handlers['textDocument/implementation'] = require'lsputil.locations'.imp
 vim.lsp.handlers['textDocument/documentSymbol'] = require'lsputil.symbols'.document_handler
 vim.lsp.handlers['workspace/symbol'] = require'lsputil.symbols'.workspace_handler
 EOF
+
 lua require 'init'
 
 "*****************************************************************************
@@ -130,6 +131,6 @@ source $HOME/.config/nvim/plug-config/closetags.vim
 source ~/.config/nvim/key-mapping.vim
 source $HOME/.config/nvim/plug-config/completion.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
+source $HOME/.config/nvim/plug-config/nerdtree.vim
 let g:completion_enable_snippet = 'UltiSnips'
 
-autocmd BufWritePre <buffer> call execute('LspCodeActionSync source.organizeImports')

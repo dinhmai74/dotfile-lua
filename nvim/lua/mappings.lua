@@ -21,6 +21,8 @@ imap('<C-b>', '<C-x><C-f>')
 nmap('zP', '"+P')
 vmap('<leader>p', '"_dP')
 tmap(',,', [[<C-\><C-n>]])
+--nmap('<space>e', ":NERDTreeToggle <CR>")
+--nmap('<leader>e', ":NERDTreeFind <CR>")
 
 return {
     nmap = nmap,
